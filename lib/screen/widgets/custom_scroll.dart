@@ -224,7 +224,7 @@ class CustomScroll extends StatelessWidget {
   Widget _getDecoratedSliverList(int itemCount) {
     return DecoratedSliver(
       decoration: BoxDecoration(
-        color: Colors.grey.shade200.withOpacity(0.2),
+        color: Colors.grey.shade200.withOpacity(0.1),
       ),
       sliver: SliverList.separated(
         itemBuilder: (_, int index) => Padding(
@@ -269,7 +269,7 @@ class SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-              color: Colors.grey.shade200.withOpacity(0.2),
+              color: Colors.grey.shade200.withOpacity(0.1),
             ),
             width: double.infinity,
             height: headerHeight,
