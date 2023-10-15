@@ -38,15 +38,20 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.only(left: 6, right: 6),
               sliver: _getDecoratedSliverList(10),
             ),
-            const SliverToBoxAdapter(
-                child: Divider(
-              height: 1,
-              thickness: 0.5,
-              color: Colors.white,
-              indent: 8,
-              endIndent: 8,
-            )),
-            const SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+            const SliverPadding(
+              padding: EdgeInsets.only(left: 6, right: 6),
+              sliver: SliverToBoxAdapter(
+                  child: Divider(
+                height: 1,
+                thickness: 0.5,
+                color: Colors.white,
+                indent: 8,
+                endIndent: 8,
+              )),
+            ),
+          ]),
+          const SliverMainAxisGroup(slivers: [
+            SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
           ]),
           const SliverToBoxAdapter(child: SizedBox(height: 10)),
           SliverMainAxisGroup(slivers: [
@@ -268,7 +273,7 @@ class SliverFooterDelegate extends SliverPersistentHeaderDelegate {
   double get maxExtent => minExtent;
 
   @override
-  double get minExtent => 50;
+  double get minExtent => 10;
 
   @override
   bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
