@@ -31,119 +31,209 @@ class _HomeScreenState extends State<HomeScreen> {
             flexibleSpace: Text('test'),
           ),
           SliverMainAxisGroup(slivers: [
-            SliverPinnedPersistentHeader(
-              delegate: SliverHeaderDelegate(title: 'Section 1', backgroundColor: _backgroundColor),
-            ),
-            SliverPadding(
-              padding: const EdgeInsets.only(left: 6, right: 6),
-              sliver: _getDecoratedSliverList(10),
-            ),
-            const SliverPadding(
-              padding: EdgeInsets.only(left: 6, right: 6),
-              sliver: SliverToBoxAdapter(
-                  child: Divider(
-                height: 1,
-                thickness: 0.5,
-                color: Colors.white,
-                indent: 8,
-                endIndent: 8,
-              )),
-            ),
-          ]),
-          const SliverMainAxisGroup(slivers: [
-            SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
-          ]),
-          const SliverToBoxAdapter(child: SizedBox(height: 10)),
-          SliverMainAxisGroup(slivers: [
-            SliverPinnedPersistentHeader(
-              delegate: SliverHeaderDelegate(title: 'Section 2', backgroundColor: _backgroundColor),
-            ),
-            SliverPadding(
-              padding: const EdgeInsets.only(bottom: 8, left: 6, right: 6),
-              sliver: _getDecoratedSliverList(10),
-            ),
-          ]),
-          SliverMainAxisGroup(slivers: [
-            SliverPinnedPersistentHeader(
-              delegate: SliverHeaderDelegate(title: 'Section 3', backgroundColor: _backgroundColor),
-            ),
-            SliverPadding(
-              padding: const EdgeInsets.only(bottom: 8, left: 6, right: 6),
-              sliver: _getDecoratedSliverList(10),
-            ),
-          ]),
-          SliverCrossAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
               SliverPinnedPersistentHeader(
-                delegate: SliverHeaderDelegate(title: 'Section 4', backgroundColor: _backgroundColor),
+                delegate: SliverHeaderDelegate(title: 'Section 1', backgroundColor: _backgroundColor),
               ),
               SliverPadding(
-                padding: const EdgeInsets.only(bottom: 8, left: 6, right: 6),
+                padding: const EdgeInsets.only(left: 6, right: 6),
+                sliver: _getDecoratedSliverList(10),
+              ),
+              const SliverPadding(
+                padding: EdgeInsets.only(left: 6, right: 6),
+                sliver: SliverToBoxAdapter(
+                    child: Divider(
+                  height: 1,
+                  thickness: 0.5,
+                  color: Colors.white,
+                  indent: 8,
+                  endIndent: 8,
+                )),
+              ),
+            ]),
+            const SliverMainAxisGroup(slivers: [
+              SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+            ]),
+            const SliverToBoxAdapter(child: SizedBox(height: 10)),
+          ]), // Section 1
+          SliverMainAxisGroup(slivers: [
+            SliverMainAxisGroup(slivers: [
+              SliverPinnedPersistentHeader(
+                delegate: SliverHeaderDelegate(title: 'Section 2', backgroundColor: _backgroundColor),
+              ),
+              SliverPadding(
+                padding: const EdgeInsets.only(left: 6, right: 6),
                 sliver: _getDecoratedSliverList(10),
               ),
             ]),
+            const SliverMainAxisGroup(slivers: [
+              SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+            ]),
+            const SliverToBoxAdapter(child: SizedBox(height: 10)),
+          ]), // Section 2
+          SliverMainAxisGroup(slivers: [
+            SliverMainAxisGroup(slivers: [
+              SliverPinnedPersistentHeader(
+                delegate: SliverHeaderDelegate(title: 'Section 3', backgroundColor: _backgroundColor),
+              ),
+              SliverPadding(
+                padding: const EdgeInsets.only(left: 6, right: 6),
+                sliver: _getDecoratedSliverList(10),
+              ),
+            ]),
+            const SliverMainAxisGroup(slivers: [
+              SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+            ]),
+            const SliverToBoxAdapter(child: SizedBox(height: 10)),
+          ]), //Section 3
+          SliverCrossAxisGroup(slivers: [
+            SliverMainAxisGroup(
+              slivers: [
+                SliverMainAxisGroup(slivers: [
+                  SliverPinnedPersistentHeader(
+                    delegate: SliverHeaderDelegate(title: 'Section 4', backgroundColor: _backgroundColor),
+                  ),
+                  SliverPadding(
+                    padding: const EdgeInsets.only(left: 6, right: 6),
+                    sliver: _getDecoratedSliverList(10),
+                  ),
+                ]),
+                const SliverMainAxisGroup(slivers: [
+                  SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+                ]),
+                const SliverToBoxAdapter(child: SizedBox(height: 10)),
+              ],
+            ), // Section 4
+            SliverMainAxisGroup(slivers: [
+              SliverMainAxisGroup(slivers: [
+                SliverPersistentHeader(
+                  pinned: true,
+                  delegate: SliverHeaderDelegate(title: 'Section 5', backgroundColor: _backgroundColor),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  sliver: _getDecoratedSliverList(10),
+                ),
+              ]),
+              const SliverMainAxisGroup(slivers: [
+                SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+              ]),
+              const SliverToBoxAdapter(child: SizedBox(height: 10)),
+            ]),
+          ]), // Section 4 and 5
+          SliverCrossAxisGroup(slivers: [
+            SliverMainAxisGroup(slivers: [
+              SliverMainAxisGroup(slivers: [
+                SliverPinnedPersistentHeader(
+                  delegate: SliverHeaderDelegate(title: 'Section 6', backgroundColor: _backgroundColor),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  sliver: _getDecoratedSliverList(10),
+                ),
+              ]),
+              const SliverMainAxisGroup(slivers: [
+                SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+              ]),
+              const SliverToBoxAdapter(child: SizedBox(height: 10)),
+            ]),
+            SliverMainAxisGroup(slivers: [
+              SliverMainAxisGroup(slivers: [
+                SliverPersistentHeader(
+                  pinned: true,
+                  delegate: SliverHeaderDelegate(title: 'Section 7', backgroundColor: _backgroundColor),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  sliver: _getDecoratedSliverList(10),
+                ),
+              ]),
+              const SliverMainAxisGroup(slivers: [
+                SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+              ]),
+              const SliverToBoxAdapter(child: SizedBox(height: 10)),
+            ]),
+          ]), // Section 6 and 7
+          SliverMainAxisGroup(slivers: [
+            SliverMainAxisGroup(slivers: [
+              SliverPinnedPersistentHeader(
+                delegate: SliverHeaderDelegate(title: 'Section 8', backgroundColor: _backgroundColor),
+              ),
+              SliverPadding(
+                padding: const EdgeInsets.only(left: 6, right: 6),
+                sliver: _getDecoratedSliverList(10),
+              ),
+            ]),
+            const SliverMainAxisGroup(slivers: [
+              SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+            ]),
+            const SliverToBoxAdapter(child: SizedBox(height: 10)),
+          ]), // Section 8
+          SliverMainAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
               SliverPersistentHeader(
                 pinned: true,
-                delegate: SliverHeaderDelegate(title: 'Section 5', backgroundColor: _backgroundColor),
-              ),
-              SliverPadding(
-                padding: const EdgeInsets.only(bottom: 8, left: 6, right: 6),
-                sliver: _getDecoratedSliverList(10),
-              ),
-            ]),
-          ]),
-          SliverCrossAxisGroup(slivers: [
-            SliverMainAxisGroup(slivers: [
-              SliverPinnedPersistentHeader(
-                delegate: SliverHeaderDelegate(title: 'Section 6', backgroundColor: _backgroundColor),
-              ),
-              SliverPadding(
-                padding: const EdgeInsets.only(bottom: 8, left: 6, right: 6),
-                sliver: _getDecoratedSliverList(10),
-              ),
-            ]),
-            SliverMainAxisGroup(slivers: [
-              SliverPersistentHeader(
-                pinned: true,
-                delegate: SliverHeaderDelegate(title: 'Section 7', backgroundColor: _backgroundColor),
-              ),
-              SliverPadding(
-                padding: const EdgeInsets.only(bottom: 8, left: 6, right: 6),
-                sliver: _getDecoratedSliverList(10),
-              ),
-            ]),
-          ]),
-          SliverMainAxisGroup(slivers: [
-            SliverPinnedPersistentHeader(
-              delegate: SliverHeaderDelegate(title: 'Section 8', backgroundColor: _backgroundColor),
-            ),
-            SliverPadding(
-              padding: const EdgeInsets.only(bottom: 8, left: 6, right: 6),
-              sliver: _getDecoratedSliverList(10),
-            ),
-          ]),
-          SliverCrossAxisGroup(slivers: [
-            SliverMainAxisGroup(slivers: [
-              SliverPinnedPersistentHeader(
                 delegate: SliverHeaderDelegate(title: 'Section 9', backgroundColor: _backgroundColor),
               ),
               SliverPadding(
-                padding: const EdgeInsets.only(bottom: 8, left: 6, right: 6),
+                padding: const EdgeInsets.only(left: 6, right: 6),
                 sliver: _getDecoratedSliverList(10),
               ),
             ]),
+            const SliverMainAxisGroup(slivers: [
+              SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+            ]),
+            const SliverToBoxAdapter(child: SizedBox(height: 10)),
+          ]), // Section 9
+          SliverCrossAxisGroup(slivers: [
+            SliverMainAxisGroup(slivers: [
+              SliverMainAxisGroup(slivers: [
+                SliverPinnedPersistentHeader(
+                  delegate: SliverHeaderDelegate(title: 'Section 10', backgroundColor: _backgroundColor),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  sliver: _getDecoratedSliverList(10),
+                ),
+              ]),
+              const SliverMainAxisGroup(slivers: [
+                SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+              ]),
+              const SliverToBoxAdapter(child: SizedBox(height: 10)),
+            ]),
+            SliverMainAxisGroup(slivers: [
+              SliverMainAxisGroup(slivers: [
+                SliverPersistentHeader(
+                  pinned: true,
+                  delegate: SliverHeaderDelegate(title: 'Section 11', backgroundColor: _backgroundColor),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  sliver: _getDecoratedSliverList(10),
+                ),
+              ]),
+              const SliverMainAxisGroup(slivers: [
+                SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+              ]),
+              const SliverToBoxAdapter(child: SizedBox(height: 10)),
+            ]),
+          ]), // Section 10 and 11
+          SliverMainAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
               SliverPersistentHeader(
                 pinned: true,
-                delegate: SliverHeaderDelegate(title: 'Section 10', backgroundColor: _backgroundColor),
+                delegate: SliverHeaderDelegate(title: 'Section 11', backgroundColor: _backgroundColor),
               ),
               SliverPadding(
-                padding: const EdgeInsets.only(bottom: 8, left: 6, right: 6),
+                padding: const EdgeInsets.only(left: 6, right: 6),
                 sliver: _getDecoratedSliverList(10),
               ),
             ]),
-          ]),
+            const SliverMainAxisGroup(slivers: [
+              SliverPinnedPersistentFooter(delegate: SliverFooterDelegate(title: '')),
+            ]),
+            const SliverToBoxAdapter(child: SizedBox(height: 10)),
+          ]), // Section 12
         ],
       ),
     );
@@ -188,12 +278,9 @@ class SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
     return Stack(
       fit: StackFit.expand,
       children: [
-        Container(
+        DecoratedBox(
           decoration: BoxDecoration(
             color: backgroundColor,
-          ),
-          child: Center(
-            child: Text(title),
           ),
         ),
         Padding(
@@ -206,7 +293,10 @@ class SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
             width: double.infinity,
             height: headerHeight,
             child: Center(
-              child: Text(title),
+              child: Text(
+                title,
+                style: const TextStyle(fontSize: 20),
+              ),
             ),
           ),
         ),
