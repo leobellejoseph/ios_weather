@@ -1,4 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+
+import '../../config/app_config.dart';
 
 class CustomScroll extends StatelessWidget {
   final Color backgroundColor;
@@ -15,11 +19,11 @@ class CustomScroll extends StatelessWidget {
         ),
         SliverMainAxisGroup(slivers: [
           SliverMainAxisGroup(slivers: [
-            SliverPinnedPersistentHeader(
-              delegate: SliverHeaderDelegate(title: 'Section 1', backgroundColor: backgroundColor),
+            const SliverPinnedPersistentHeader(
+              delegate: SliverHeaderDelegate(title: 'Section 1'),
             ),
             SliverPadding(
-              padding: const EdgeInsets.only(left: 6, right: 6),
+              padding: AppConfig.bodyPadding,
               sliver: _getDecoratedSliverList(10),
             ),
             const SliverPadding(
@@ -41,11 +45,11 @@ class CustomScroll extends StatelessWidget {
         ]), // Section 1
         SliverMainAxisGroup(slivers: [
           SliverMainAxisGroup(slivers: [
-            SliverPinnedPersistentHeader(
-              delegate: SliverHeaderDelegate(title: 'Section 2', backgroundColor: backgroundColor),
+            const SliverPinnedPersistentHeader(
+              delegate: SliverHeaderDelegate(title: 'Section 2'),
             ),
             SliverPadding(
-              padding: const EdgeInsets.only(left: 6, right: 6),
+              padding: AppConfig.bodyPadding,
               sliver: _getDecoratedSliverList(10),
             ),
           ]),
@@ -56,11 +60,11 @@ class CustomScroll extends StatelessWidget {
         ]), // Section 2
         SliverMainAxisGroup(slivers: [
           SliverMainAxisGroup(slivers: [
-            SliverPinnedPersistentHeader(
-              delegate: SliverHeaderDelegate(title: 'Section 3', backgroundColor: backgroundColor),
+            const SliverPinnedPersistentHeader(
+              delegate: SliverHeaderDelegate(title: 'Section 3'),
             ),
             SliverPadding(
-              padding: const EdgeInsets.only(left: 6, right: 6),
+              padding: AppConfig.bodyPadding,
               sliver: _getDecoratedSliverList(10),
             ),
           ]),
@@ -73,11 +77,11 @@ class CustomScroll extends StatelessWidget {
           SliverMainAxisGroup(
             slivers: [
               SliverMainAxisGroup(slivers: [
-                SliverPinnedPersistentHeader(
-                  delegate: SliverHeaderDelegate(title: 'Section 4', backgroundColor: backgroundColor),
+                const SliverPinnedPersistentHeader(
+                  delegate: SliverHeaderDelegate(title: 'Section 4'),
                 ),
                 SliverPadding(
-                  padding: const EdgeInsets.only(left: 6, right: 6),
+                  padding: AppConfig.padding,
                   sliver: _getDecoratedSliverList(10),
                 ),
               ]),
@@ -89,12 +93,12 @@ class CustomScroll extends StatelessWidget {
           ), // Section 4
           SliverMainAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
-              SliverPersistentHeader(
+              const SliverPersistentHeader(
                 pinned: true,
-                delegate: SliverHeaderDelegate(title: 'Section 5', backgroundColor: backgroundColor),
+                delegate: SliverHeaderDelegate(title: 'Section 5'),
               ),
               SliverPadding(
-                padding: const EdgeInsets.only(left: 6, right: 6),
+                padding: AppConfig.padding,
                 sliver: _getDecoratedSliverList(10),
               ),
             ]),
@@ -107,11 +111,11 @@ class CustomScroll extends StatelessWidget {
         SliverCrossAxisGroup(slivers: [
           SliverMainAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
-              SliverPinnedPersistentHeader(
-                delegate: SliverHeaderDelegate(title: 'Section 6', backgroundColor: backgroundColor),
+              const SliverPinnedPersistentHeader(
+                delegate: SliverHeaderDelegate(title: 'Section 6'),
               ),
               SliverPadding(
-                padding: const EdgeInsets.only(left: 6, right: 6),
+                padding: AppConfig.padding,
                 sliver: _getDecoratedSliverList(10),
               ),
             ]),
@@ -122,12 +126,12 @@ class CustomScroll extends StatelessWidget {
           ]),
           SliverMainAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
-              SliverPersistentHeader(
+              const SliverPersistentHeader(
                 pinned: true,
-                delegate: SliverHeaderDelegate(title: 'Section 7', backgroundColor: backgroundColor),
+                delegate: SliverHeaderDelegate(title: 'Section 7'),
               ),
               SliverPadding(
-                padding: const EdgeInsets.only(left: 6, right: 6),
+                padding: AppConfig.padding,
                 sliver: _getDecoratedSliverList(10),
               ),
             ]),
@@ -139,11 +143,11 @@ class CustomScroll extends StatelessWidget {
         ]), // Section 6 and 7
         SliverMainAxisGroup(slivers: [
           SliverMainAxisGroup(slivers: [
-            SliverPinnedPersistentHeader(
-              delegate: SliverHeaderDelegate(title: 'Section 8', backgroundColor: backgroundColor),
+            const SliverPinnedPersistentHeader(
+              delegate: SliverHeaderDelegate(title: 'Section 8'),
             ),
             SliverPadding(
-              padding: const EdgeInsets.only(left: 6, right: 6),
+              padding: AppConfig.bodyPadding,
               sliver: _getDecoratedSliverList(10),
             ),
           ]),
@@ -154,12 +158,12 @@ class CustomScroll extends StatelessWidget {
         ]), // Section 8
         SliverMainAxisGroup(slivers: [
           SliverMainAxisGroup(slivers: [
-            SliverPersistentHeader(
+            const SliverPersistentHeader(
               pinned: true,
-              delegate: SliverHeaderDelegate(title: 'Section 9', backgroundColor: backgroundColor),
+              delegate: SliverHeaderDelegate(title: 'Section 9'),
             ),
             SliverPadding(
-              padding: const EdgeInsets.only(left: 6, right: 6),
+              padding: AppConfig.bodyPadding,
               sliver: _getDecoratedSliverList(10),
             ),
           ]),
@@ -171,11 +175,11 @@ class CustomScroll extends StatelessWidget {
         SliverCrossAxisGroup(slivers: [
           SliverMainAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
-              SliverPinnedPersistentHeader(
-                delegate: SliverHeaderDelegate(title: 'Section 10', backgroundColor: backgroundColor),
+              const SliverPinnedPersistentHeader(
+                delegate: SliverHeaderDelegate(title: 'Section 10'),
               ),
               SliverPadding(
-                padding: const EdgeInsets.only(left: 6, right: 6),
+                padding: AppConfig.padding,
                 sliver: _getDecoratedSliverList(10),
               ),
             ]),
@@ -186,12 +190,12 @@ class CustomScroll extends StatelessWidget {
           ]),
           SliverMainAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
-              SliverPersistentHeader(
+              const SliverPersistentHeader(
                 pinned: true,
-                delegate: SliverHeaderDelegate(title: 'Section 11', backgroundColor: backgroundColor),
+                delegate: SliverHeaderDelegate(title: 'Section 11'),
               ),
               SliverPadding(
-                padding: const EdgeInsets.only(left: 6, right: 6),
+                padding: AppConfig.padding,
                 sliver: _getDecoratedSliverList(10),
               ),
             ]),
@@ -203,12 +207,12 @@ class CustomScroll extends StatelessWidget {
         ]), // Section 10 and 11
         SliverMainAxisGroup(slivers: [
           SliverMainAxisGroup(slivers: [
-            SliverPersistentHeader(
+            const SliverPersistentHeader(
               pinned: true,
-              delegate: SliverHeaderDelegate(title: 'Section 11', backgroundColor: backgroundColor),
+              delegate: SliverHeaderDelegate(title: 'Section 11'),
             ),
             SliverPadding(
-              padding: const EdgeInsets.only(left: 6, right: 6),
+              padding: AppConfig.bodyPadding,
               sliver: _getDecoratedSliverList(10),
             ),
           ]),
@@ -224,7 +228,7 @@ class CustomScroll extends StatelessWidget {
   Widget _getDecoratedSliverList(int itemCount) {
     return DecoratedSliver(
       decoration: BoxDecoration(
-        color: Colors.grey.shade200.withOpacity(0.1),
+        color: AppConfig.backgroundColor,
       ),
       sliver: SliverList.separated(
         itemBuilder: (_, int index) => Padding(
@@ -252,36 +256,26 @@ class SliverPinnedPersistentHeader extends SliverPersistentHeader {
 class SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
   final String title;
   final double headerHeight;
-  final Color backgroundColor;
-  const SliverHeaderDelegate({required this.title, this.headerHeight = 50, this.backgroundColor = Colors.transparent});
+
+  const SliverHeaderDelegate({required this.title, this.headerHeight = 50});
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return Stack(
-      fit: StackFit.expand,
-      children: [
-        DecoratedBox(
-          decoration: BoxDecoration(
-            color: backgroundColor,
+    return Padding(
+      padding: AppConfig.bodyPadding,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+          color: AppConfig.backgroundColor,
+        ),
+        width: double.infinity,
+        height: headerHeight,
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(fontSize: 20),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 6, right: 6),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-              color: Colors.grey.shade200.withOpacity(0.1),
-            ),
-            width: double.infinity,
-            height: headerHeight,
-            child: Center(
-              child: Text(
-                title,
-                style: const TextStyle(fontSize: 20),
-              ),
-            ),
-          ),
-        ),
-      ],
+      ),
     );
   }
 
@@ -306,36 +300,23 @@ class SliverPinnedPersistentFooter extends SliverPersistentHeader {
 class SliverFooterDelegate extends SliverPersistentHeaderDelegate {
   final String title;
   final double headerHeight;
-  final Color backgroundColor;
-  const SliverFooterDelegate({required this.title, this.headerHeight = 50, this.backgroundColor = Colors.transparent});
+
+  const SliverFooterDelegate({required this.title, this.headerHeight = 50});
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return Stack(
-      fit: StackFit.expand,
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            color: backgroundColor,
-          ),
-          child: Center(
-            child: Text(title),
-          ),
+    return Padding(
+      padding: AppConfig.bodyPadding,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
+          color: AppConfig.backgroundColor,
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 6, right: 6),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
-              color: Colors.grey.shade200.withOpacity(0.1),
-            ),
-            width: double.infinity,
-            height: headerHeight,
-            child: Center(
-              child: Text(title),
-            ),
-          ),
+        width: double.infinity,
+        height: headerHeight,
+        child: Center(
+          child: Text(title),
         ),
-      ],
+      ),
     );
   }
 
