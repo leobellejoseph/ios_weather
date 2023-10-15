@@ -32,8 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
             flexibleSpace: Text('test'),
           ),
           SliverMainAxisGroup(slivers: [
-            SliverPersistentHeader(
-              pinned: true,
+            SliverPinnedPersistentHeader(
               delegate: SliverHeaderDelegate(title: 'Section 1', backgroundColor: _backgroundColor),
             ),
             SliverPadding(
@@ -42,8 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ]),
           SliverMainAxisGroup(slivers: [
-            SliverPersistentHeader(
-              pinned: true,
+            SliverPinnedPersistentHeader(
               delegate: SliverHeaderDelegate(title: 'Section 2', backgroundColor: _backgroundColor),
             ),
             SliverPadding(
@@ -52,8 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ]),
           SliverMainAxisGroup(slivers: [
-            SliverPersistentHeader(
-              pinned: true,
+            SliverPinnedPersistentHeader(
               delegate: SliverHeaderDelegate(title: 'Section 3', backgroundColor: _backgroundColor),
             ),
             SliverPadding(
@@ -63,8 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ]),
           SliverCrossAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
-              SliverPersistentHeader(
-                pinned: true,
+              SliverPinnedPersistentHeader(
                 delegate: SliverHeaderDelegate(title: 'Section 4', backgroundColor: _backgroundColor),
               ),
               SliverPadding(
@@ -85,8 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ]),
           SliverCrossAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
-              SliverPersistentHeader(
-                pinned: true,
+              SliverPinnedPersistentHeader(
                 delegate: SliverHeaderDelegate(title: 'Section 6', backgroundColor: _backgroundColor),
               ),
               SliverPadding(
@@ -106,8 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ]),
           ]),
           SliverMainAxisGroup(slivers: [
-            SliverPersistentHeader(
-              pinned: true,
+            SliverPinnedPersistentHeader(
               delegate: SliverHeaderDelegate(title: 'Section 8', backgroundColor: _backgroundColor),
             ),
             SliverPadding(
@@ -117,8 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ]),
           SliverCrossAxisGroup(slivers: [
             SliverMainAxisGroup(slivers: [
-              SliverPersistentHeader(
-                pinned: true,
+              SliverPinnedPersistentHeader(
                 delegate: SliverHeaderDelegate(title: 'Section 9', backgroundColor: _backgroundColor),
               ),
               SliverPadding(
