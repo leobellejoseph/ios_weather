@@ -27,7 +27,7 @@ class CustomScroll extends StatelessWidget {
               sliver: SliverToBoxAdapter(
                   child: Divider(
                 height: 1,
-                thickness: 0.5,
+                thickness: 0.1,
                 color: Colors.white,
                 indent: 8,
                 endIndent: 8,
@@ -234,7 +234,7 @@ class CustomScroll extends StatelessWidget {
         separatorBuilder: (_, __) => const Divider(
           indent: 8,
           endIndent: 8,
-          thickness: 0.5,
+          thickness: 0.1,
           color: Colors.white,
         ),
         itemCount: itemCount,
